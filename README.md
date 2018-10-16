@@ -7,6 +7,7 @@
 - 支持smtp安全连接
 - 支持附件
 - 支持自定义启动端口配置
+- 支持多接收人
 
 ### API
 |路由|请求方式|body|参数|说明|
@@ -27,7 +28,7 @@
 		"email": "991154416@qq.com",            //发送者邮箱
 		"name": "林文祥"                        //发送人
 	},
-	"to": "linwenxiang_xm@jsptpd.com",        //收件人邮箱
+	"to": ["linwenxiang_xm@jsptpd.com"],        //收件人邮箱
 	"auth": true                              //是否是加密连接
 }
 ```

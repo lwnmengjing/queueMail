@@ -10,7 +10,7 @@ import (
 func SendMail(message form.MessageMail) (err error) {
 	m := gomail.NewMessage()
 	m.SetAddressHeader("From", message.From.Email, message.From.Name)
-	m.SetHeader("To", message.To)
+	m.SetHeader("To", message.To...)
 	m.SetHeader("Subject", message.Subject)
 	for _, attachment := range message.Attachments {
 		m.Attach(attachment)

@@ -9,7 +9,7 @@ type MessageMail struct {
 	Subject     string   `json:"subject"`
 	Body        string   `json:"body" binding:"required"`
 	From        From     `json:"from" binding:"required"`
-	To          string   `json:"to" binding:"required"`
+	To          []string `json:"to" binding:"required"`
 	Auth        bool     `json:"auth" binding:"required"`
 }
 

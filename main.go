@@ -24,8 +24,8 @@ func main() {
 	r.POST("/message", messageHandle)
 	r.POST("/upload", func(c *gin.Context) {
 		// Multipart form
-		form, _ := c.MultipartForm()
-		files := form.File["upload[]"]
+		f, _ := c.MultipartForm()
+		files := f.File["upload[]"]
 		var filepathes []string
 
 		for _, file := range files {
