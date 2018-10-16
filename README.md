@@ -11,7 +11,7 @@
 ### API
 |路由|请求方式|body|参数|说明|
 |---:|---:|---:|---:|---:|
-|/message|post| json(消息)|-|加入邮件队列|
+|/message|post| json(消息)|见下方说明|加入邮件队列|
 |/upload|post| form-data|upload(多文件)|多文件上传接口(用于发送代附件邮件)|
 #### body参数说明
 ```javascript
